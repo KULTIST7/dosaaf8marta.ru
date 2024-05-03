@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="js/fancybox/fancybox.css"/>
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Главная</title>
+</head>
+<body>
+    <header class="header">
+        <div class="section-box">
+            <div class="header__content">
+                <a href="#" class="header__logo"><img src="images/svg/logo.svg" alt="" loading="lazy"></a>
+                <div>
+                    <div class="header__top">
+                        <p class="header__title">челябинская школа специальной подготовки
+                            <br><span>досааф россии</span>
+                        </p>
+                        <div class="header__connection">
+                            <button class="header__burger-btn">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                            <a href="mailto:nou_rosto@mail.ru" class="header__mail">
+                                <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1H4M1 5H3M7.02 2.801L6.42 8.801C6.3922 9.07903 6.42296 9.35981 6.51031 9.62522C6.59766 9.89064 6.73966 10.1348 6.92715 10.342C7.11464 10.5492 7.34346 10.7148 7.59886 10.8281C7.85426 10.9414 8.13058 11 8.41 11H16.39C16.886 11 17.3642 10.8157 17.732 10.4829C18.0997 10.1501 18.3307 9.69251 18.38 9.199L18.98 3.199C19.0078 2.92097 18.977 2.64019 18.8897 2.37478C18.8023 2.10936 18.6603 1.86519 18.4729 1.65801C18.2854 1.45083 18.0565 1.28524 17.8011 1.17191C17.5457 1.05857 17.2694 1.00001 16.99 1H9.01C8.51403 1.00002 8.03576 1.18432 7.66803 1.51712C7.3003 1.84993 7.06935 2.30749 7.02 2.801Z" stroke="#56A2E9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.7998 1.5L10.7818 4.78C11.0468 5.07155 11.3666 5.30804 11.723 5.47598C12.0794 5.64392 12.4654 5.74001 12.859 5.75877C13.2525 5.77753 13.6459 5.71858 14.0166 5.5853C14.3874 5.45203 14.7283 5.24702 15.0198 4.982L18.2998 2" stroke="#56A2E9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                nou_rosto@mail.ru
+                            </a>
+                            <a href="#" data-fancybox data-src="#dialog-content" class="header__tel">
+                                <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 9.69195L16.9008 9.21747L14.9406 11.1776C12.7324 10.0546 10.9376 8.25979 9.81458 6.05164L11.7825 4.08369L11.308 0H7.02212C6.57097 7.91847 13.0815 14.429 21 13.9779V9.69195Z" fill="#56A2E9"/>
+                                    <path d="M4 1H1M4 5H2" stroke="#56A2E9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <b>8 (351)</b> 260-12-00
+                                <br><span>заказать звонок</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header__bottom">
+                        <nav class="menu header__menu">
+                            <a href="#">О нас</a>
+                            <a href="#" class="active">Программы обучения</a>
+                            <a href="#">Как получить “права” ГИМС</a>
+                            <a href="#">Стоимость</a>
+                            <a href="#">Контакты</a>
+                        </nav>
+                        <a href="https://vk.com/feed" target="_blank" class="header__social">
+                            <svg width="25" height="14" viewBox="0 0 25 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.24581 0.979455C8.57841 1.13714 9.35439 1.05509 9.63311 2.0165C9.88423 2.88255 9.87392 4.95368 9.67984 5.91772C9.14318 8.58359 6.8778 4.36717 6.31852 3.44094C6.02899 2.96131 5.52526 1.86737 5.30141 1.33363C4.91526 0.412672 3.98945 0.608835 2.88602 0.608835C2.47093 0.608835 2.19071 0.646817 1.79907 0.645995C1.18624 0.644515 0 0.527278 0 1.09061C0 1.52157 0.24696 1.95221 0.437211 2.32596L1.4623 4.35122C1.64141 4.69158 1.80572 5.03277 2.00811 5.36804L2.56506 6.33669C4.03185 8.73158 5.79417 11.5407 8.43323 12.8382C10.4335 13.8216 11.375 13.8017 13.5682 13.8017C13.9096 13.8017 14.3385 13.6179 14.4571 13.3836C14.6017 13.0978 14.5869 12.6249 14.6185 12.2461C14.6959 11.3233 15.1492 10.1054 16.2452 10.8583C16.7644 11.2151 17.3953 12.0461 17.8691 12.5139C18.1259 12.7673 18.4365 13.0991 18.7249 13.2984C18.8726 13.4005 19.117 13.5478 19.2697 13.6121C20.1759 13.9936 21.2166 13.8014 22.3388 13.8017C22.9616 13.8019 24.0473 13.9035 24.5723 13.5641C25.4046 13.0259 24.5723 12.0642 24.1005 11.467C23.8309 11.126 22.791 10.0368 22.4228 9.71617C20.0126 7.61774 20.4949 7.95795 22.9921 4.66412C23.5159 3.97303 24.925 2.16219 24.925 1.20176C24.925 0.698283 24.3854 0.655203 23.9814 0.612781C23.7737 0.591076 23.716 0.64468 23.5023 0.647311C22.8384 0.655532 19.8152 0.575456 19.437 0.704367C19.1927 0.787732 19.0539 1.03618 18.9546 1.26507C18.3928 2.55846 18.0098 3.44916 17.2042 4.64867C16.8781 5.13422 15.8336 6.76058 15.1798 6.76058C14.7115 6.76058 14.5427 5.8383 14.5427 5.38941C14.5427 4.02795 14.6177 2.78586 14.6177 1.46123C14.6177 1.17924 14.556 0.883594 14.4622 0.688418C14.0526 -0.164306 11.822 0.0159071 10.7946 0.0159071C10.0525 0.0159071 8.85614 0.0918728 8.39415 0.681347C8.32231 0.773263 8.25911 0.822427 8.24581 0.979455Z" fill="#7D889A"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__drop-down">
+                <a href="#">Маломерное моторное судно</a>
+                <a href="#">Гидроцикл</a>
+                <a href="#" class="active">Матрос-спасатель</a>
+                <a href="#">допуски районов плавания</a>      
+            </div>
+        </div>
+    </header>
+    <div class="burger">
+        <div class="burger__content">
+            <button class="burger__close-btn">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5562 15.5564C15.9467 15.1658 15.9467 14.5327 15.5562 14.1421L9.70247 8.28841L15.7482 2.24266C16.1387 1.85214 16.1387 1.21897 15.7482 0.828447C15.3577 0.437922 14.7245 0.437922 14.334 0.828447L8.28825 6.87419L2.12117 0.707108C1.73065 0.316584 1.09748 0.316584 0.706956 0.707108C0.316431 1.09763 0.316431 1.7308 0.706956 2.12132L6.87404 8.28841L0.89897 14.2635C0.508445 14.654 0.508445 15.2872 0.89897 15.6777C1.28949 16.0682 1.92266 16.0682 2.31318 15.6777L8.28825 9.70262L14.142 15.5564C14.5325 15.9469 15.1657 15.9469 15.5562 15.5564Z" fill="#6F7279"/>
+                </svg>
+            </button>
+            <div class="burger__menu menu">
+                <a href="#">О нас</a>
+                <a href="#" class="active">услуги</a>
+                <a href="#">лицензии и разрешения</a>
+                <a href="#">наши клиенты</a>
+                <a href="#" class="active-secondary">оплатить обучение</a>
+                <a href="#">Контакты</a>
+                <a href="#" class="disabled">Сведения об образовательной организации</a>
+            </div>
+            <div class="burger__contacts">
+                <a href="#" data-fancybox data-src="#dialog-content" class="header__tel">
+                    <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 9.69195L16.9008 9.21747L14.9406 11.1776C12.7324 10.0546 10.9376 8.25979 9.81458 6.05164L11.7825 4.08369L11.308 0H7.02212C6.57097 7.91847 13.0815 14.429 21 13.9779V9.69195Z" fill="#56A2E9"/>
+                        <path d="M4 1H1M4 5H2" stroke="#56A2E9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <b>8 (351)</b> 260-12-00
+                </a>
+                <a href="mailto:nou_rosto@mail.ru" class="header__mail">
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1H4M1 5H3M7.02 2.801L6.42 8.801C6.3922 9.07903 6.42296 9.35981 6.51031 9.62522C6.59766 9.89064 6.73966 10.1348 6.92715 10.342C7.11464 10.5492 7.34346 10.7148 7.59886 10.8281C7.85426 10.9414 8.13058 11 8.41 11H16.39C16.886 11 17.3642 10.8157 17.732 10.4829C18.0997 10.1501 18.3307 9.69251 18.38 9.199L18.98 3.199C19.0078 2.92097 18.977 2.64019 18.8897 2.37478C18.8023 2.10936 18.6603 1.86519 18.4729 1.65801C18.2854 1.45083 18.0565 1.28524 17.8011 1.17191C17.5457 1.05857 17.2694 1.00001 16.99 1H9.01C8.51403 1.00002 8.03576 1.18432 7.66803 1.51712C7.3003 1.84993 7.06935 2.30749 7.02 2.801Z" stroke="#56A2E9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7.7998 1.5L10.7818 4.78C11.0468 5.07155 11.3666 5.30804 11.723 5.47598C12.0794 5.64392 12.4654 5.74001 12.859 5.75877C13.2525 5.77753 13.6459 5.71858 14.0166 5.5853C14.3874 5.45203 14.7283 5.24702 15.0198 4.982L18.2998 2" stroke="#56A2E9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    nou_rosto@mail.ru
+                </a>
+                <div class="burger__address">
+                    <div class="burger__address__item">
+                        <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 6.7C1 3.552 3.686 1 7 1C10.314 1 13 3.552 13 6.7C13 9.824 11.085 13.469 8.097 14.772C7.7508 14.9223 7.37741 14.9998 7 14.9998C6.62259 14.9998 6.2492 14.9223 5.903 14.772C2.915 13.47 1 9.824 1 6.7Z" stroke="#56A2E9" stroke-width="1.5"/>
+                            <path d="M7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9Z" stroke="#56A2E9" stroke-width="1.5"/>
+                        </svg>
+                        <div>
+                            <p>Адрес школы:</p>
+                            <p><span>г. Челябинск</span> ул. Евтеева д.6 цокольный этаж</p>
+                        </div>
+                    </div>
+                    <div class="burger__address__item">
+                        <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 6.7C1 3.552 3.686 1 7 1C10.314 1 13 3.552 13 6.7C13 9.824 11.085 13.469 8.097 14.772C7.7508 14.9223 7.37741 14.9998 7 14.9998C6.62259 14.9998 6.2492 14.9223 5.903 14.772C2.915 13.47 1 9.824 1 6.7Z" stroke="#56A2E9" stroke-width="1.5"/>
+                            <path d="M7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9Z" stroke="#56A2E9" stroke-width="1.5"/>
+                        </svg>
+                        <div>
+                            <p>Адрес тира:</p>
+                            <p><span>г. Челябинск</span> ул. Плеханова д.1А</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://vk.com/feed" target="_blank" class="header__social">
+                    <svg width="25" height="14" viewBox="0 0 25 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.24581 0.979455C8.57841 1.13714 9.35439 1.05509 9.63311 2.0165C9.88423 2.88255 9.87392 4.95368 9.67984 5.91772C9.14318 8.58359 6.8778 4.36717 6.31852 3.44094C6.02899 2.96131 5.52526 1.86737 5.30141 1.33363C4.91526 0.412672 3.98945 0.608835 2.88602 0.608835C2.47093 0.608835 2.19071 0.646817 1.79907 0.645995C1.18624 0.644515 0 0.527278 0 1.09061C0 1.52157 0.24696 1.95221 0.437211 2.32596L1.4623 4.35122C1.64141 4.69158 1.80572 5.03277 2.00811 5.36804L2.56506 6.33669C4.03185 8.73158 5.79417 11.5407 8.43323 12.8382C10.4335 13.8216 11.375 13.8017 13.5682 13.8017C13.9096 13.8017 14.3385 13.6179 14.4571 13.3836C14.6017 13.0978 14.5869 12.6249 14.6185 12.2461C14.6959 11.3233 15.1492 10.1054 16.2452 10.8583C16.7644 11.2151 17.3953 12.0461 17.8691 12.5139C18.1259 12.7673 18.4365 13.0991 18.7249 13.2984C18.8726 13.4005 19.117 13.5478 19.2697 13.6121C20.1759 13.9936 21.2166 13.8014 22.3388 13.8017C22.9616 13.8019 24.0473 13.9035 24.5723 13.5641C25.4046 13.0259 24.5723 12.0642 24.1005 11.467C23.8309 11.126 22.791 10.0368 22.4228 9.71617C20.0126 7.61774 20.4949 7.95795 22.9921 4.66412C23.5159 3.97303 24.925 2.16219 24.925 1.20176C24.925 0.698283 24.3854 0.655203 23.9814 0.612781C23.7737 0.591076 23.716 0.64468 23.5023 0.647311C22.8384 0.655532 19.8152 0.575456 19.437 0.704367C19.1927 0.787732 19.0539 1.03618 18.9546 1.26507C18.3928 2.55846 18.0098 3.44916 17.2042 4.64867C16.8781 5.13422 15.8336 6.76058 15.1798 6.76058C14.7115 6.76058 14.5427 5.8383 14.5427 5.38941C14.5427 4.02795 14.6177 2.78586 14.6177 1.46123C14.6177 1.17924 14.556 0.883594 14.4622 0.688418C14.0526 -0.164306 11.822 0.0159071 10.7946 0.0159071C10.0525 0.0159071 8.85614 0.0918728 8.39415 0.681347C8.32231 0.773263 8.25911 0.822427 8.24581 0.979455Z" fill="#7D889A"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="call">
+        <a href="#" data-fancybox data-src="#dialog-content">
+            <svg width="36" height="24" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 9.69195L16.9008 9.21747L14.9406 11.1776C12.7324 10.0546 10.9376 8.25979 9.81458 6.05164L11.7825 4.08369L11.308 0H7.02212C6.57097 7.91847 13.0815 14.429 21 13.9779V9.69195Z" fill="#56A2E9"/>
+                <path d="M4 1H1M4 5H2" stroke="#56A2E9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <a href="#">
+            <svg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M35.9209 11.6262C35.869 11.5062 34.5999 8.66769 31.7656 5.80923C29.1357 3.16 24.6174 0 18 0C11.3826 0 6.86427 3.16 4.23441 5.80923C1.40013 8.66769 0.130965 11.5015 0.0791004 11.6262C0.0269491 11.7443 0 11.8722 0 12.0015C0 12.1309 0.0269491 12.2588 0.0791004 12.3769C0.130965 12.4954 1.40013 15.3338 4.23441 18.1923C6.86427 20.8415 11.3826 24 18 24C24.6174 24 29.1357 20.8415 31.7656 18.1923C34.5999 15.3338 35.869 12.5 35.9209 12.3769C35.973 12.2588 36 12.1309 36 12.0015C36 11.8722 35.973 11.7443 35.9209 11.6262ZM18 22.1538C13.2132 22.1538 9.03345 20.3969 5.57527 16.9338C4.12561 15.4808 2.89888 13.8179 1.93556 12C2.8986 10.1823 4.12537 8.51991 5.57527 7.06769C9.03345 3.60308 13.2132 1.84615 18 1.84615C22.7868 1.84615 26.9666 3.60308 30.4247 7.06769C31.8746 8.51991 33.1014 10.1823 34.0644 12C33.0927 13.8785 28.2205 22.1538 18 22.1538ZM18 4.92308C16.6122 4.92308 15.2555 5.33813 14.1015 6.11575C12.9476 6.89338 12.0482 7.99864 11.5171 9.29178C10.986 10.5849 10.847 12.0079 11.1178 13.3806C11.3885 14.7534 12.0569 16.0144 13.0382 17.0041C14.0196 17.9939 15.2699 18.6679 16.631 18.9409C17.9922 19.214 19.4031 19.0739 20.6853 18.5382C21.9675 18.0026 23.0634 17.0955 23.8345 15.9317C24.6055 14.7679 25.017 13.3997 25.017 12C25.0146 10.1238 24.2745 8.32521 22.9591 6.99856C21.6437 5.67191 19.8603 4.92552 18 4.92308ZM18 17.2308C16.9742 17.2308 15.9714 16.924 15.1185 16.3492C14.2656 15.7745 13.6008 14.9575 13.2083 14.0017C12.8157 13.0459 12.713 11.9942 12.9132 10.9795C13.1133 9.96486 13.6072 9.03282 14.3326 8.30129C15.0579 7.56975 15.9821 7.07157 16.9882 6.86974C17.9942 6.66791 19.0371 6.7715 19.9848 7.1674C20.9325 7.5633 21.7425 8.23374 22.3124 9.09394C22.8823 9.95414 23.1865 10.9655 23.1865 12C23.1865 13.3873 22.6401 14.7178 21.6674 15.6987C20.6948 16.6797 19.3755 17.2308 18 17.2308Z" fill="#56A2E9"/>
+            </svg>                
+        </a>
+    </div>
+    <div class="up up-invisible"><img src="images/svg/btn-arrow-blue.svg" alt="" loading="lazy"></div>
+    <section class="swiper slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="section-box">
+                    <div>
+                        <h2>подготовка судоводителей<span>маломерных судов</span></h2>
+                        <p>собственные маломерные суда - мы не арендуем водный транспорт у других, а имеем в собственности моторное судно и гидроцикл! Наши водо-моторные средства постоянно находятся на базе Центра ГИМС на озере Смолино.</p>
+                    </div>
+                    <a href="#" class="btn-normal">получить консультацию</a>
+                </div>
+            <img src="images/main-swiper-bg.jpg" alt="" loading="lazy">
+            </div>
+            <div class="swiper-slide">
+                <div class="section-box">
+                    <div>
+                        <h2>подготовка судоводителей<span>маломерных судов</span></h2>
+                        <p>собственные маломерные суда - мы не арендуем водный транспорт у других, а имеем в собственности моторное судно и гидроцикл! Наши водо-моторные средства постоянно находятся на базе Центра ГИМС на озере Смолино.</p>
+                    </div>
+                    <a href="#" class="btn-normal">получить консультацию</a>
+                </div>
+            <img src="images/main-swiper-bg.jpg" alt="" loading="lazy">
+            </div>
+            <div class="swiper-slide">
+                <div class="section-box">
+                    <div>
+                        <h2>подготовка судоводителей<span>маломерных судов</span></h2>
+                        <p>собственные маломерные суда - мы не арендуем водный транспорт у других, а имеем в собственности моторное судно и гидроцикл! Наши водо-моторные средства постоянно находятся на базе Центра ГИМС на озере Смолино.</p>
+                    </div>
+                    <a href="#" class="btn-normal">получить консультацию</a>
+                </div>
+            <img src="images/main-swiper-bg.jpg" alt="" loading="lazy">
+            </div>
+            <div class="swiper-slide">
+                <div class="section-box">
+                    <div>
+                        <h2>подготовка судоводителей<span>маломерных судов</span></h2>
+                        <p>собственные маломерные суда - мы не арендуем водный транспорт у других, а имеем в собственности моторное судно и гидроцикл! Наши водо-моторные средства постоянно находятся на базе Центра ГИМС на озере Смолино.</p>
+                    </div>
+                    <a href="#" class="btn-normal">получить консультацию</a>
+                </div>
+            <img src="images/main-swiper-bg.jpg" alt="" loading="lazy">
+            </div>
+            <div class="swiper-slide">
+                <div class="section-box">
+                    <div>
+                        <h2>подготовка судоводителей<span>маломерных судов</span></h2>
+                        <p>собственные маломерные суда - мы не арендуем водный транспорт у других, а имеем в собственности моторное судно и гидроцикл! Наши водо-моторные средства постоянно находятся на базе Центра ГИМС на озере Смолино.</p>
+                    </div>
+                    <a href="#" class="btn-normal">получить консультацию</a>
+                </div>
+            <img src="images/main-swiper-bg.jpg" alt="" loading="lazy">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </section>
+    <section class="services">
+        <h2>школа <span>готовит судоводителей</span></h2>
+        <h3>по следующим категориям</h3>
+        <img src="images/gull-1.png" alt="" loading="lazy">
+        <img src="images/gull-2.png" alt="" loading="lazy">
+        <div class="services__content">
+            <div class="section-box">
+                <div class="swiper services-swiper">
+                    <div class="swiper-wrapper services__list">
+                        <div class="swiper-slide services__list__card">
+                            <a href="#"></a>
+                            <h3>Маломерное моторное судно</h3>
+                            <p>мотолодка с одним или несколькими подвесными моторами, либо катер со стационарным двигателем. К маломерным относятся суда длиной до 20 метров для перевозки не более 12 человек</p>
+                            <img src="images/services-card-img-1.png" alt="" loading="lazy">
+                        </div>
+                        <div class="swiper-slide services__list__card">
+                            <a href="#"></a>
+                            <h3>Гидроцикл</h3>
+                            <p>(он же водный мотоцикл/байк/скутер/аквабайк) - скоростное персональное водное транспортное средство (плавсредство) со стационарным двигателем внутреннего сгорания, предназначенное для движения по водной поверхности.</p>
+                            <img src="images/services-card-img-2.png" alt="" loading="lazy">
+                        </div>
+                        <div class="swiper-slide services__list__card">
+                            <a href="#"></a>
+                            <h3>Матросы-спасатели</h3>
+                            <p>кроме этого, школа обучает “Матросов-спасателей” - люди, которые обеспечивают безопасность на пляжах, в бассейнах, аквапарках и других развлекательных местах.</p>
+                            <img src="images/services-card-img-3.png" alt="" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="services__areas">
+                    <h3>Наша школа <span>обучает на допуск</span></h3>
+                    <h3>во все возможные районы плавания</h3>
+                    <div class="services__areas__content">
+                        <div class="services__areas__card">
+                            <h3>ВП</h3>
+                            <p><span>Внутренние пути</span> – водоемы, для передвижения по которым не требуется соблюдения знаков приоритета между судоводителями, как на внутренних водных путях (не судоходные реки и озёра)</p>
+                        </div>
+                        <div class="services__areas__card">
+                            <h3>ВВП</h3>
+                            <p><span>Внутренние водные пути</span> – водоемы, где судоводитель обязан соблюдать определенные правила управления плавсредством (судоходные реки и озера)</p>
+                        </div>
+                        <div class="services__areas__card">
+                            <h3>МП</h3>
+                            <p><span>Морские пути</span> – внутренние и внешние моря, прилегающие к территориям государства.<br>К данной категории также относятся водоемы, которые не являются морями, но где действуют правила судоходства, как на морских путях (это озера Байкал, Онежское, Ладожское)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <h2>о нас</h2>
+        <div class="section-box">
+            <div class="about__flags">
+                <img src="images/flags.png" alt="" loading="lazy">
+                <img src="images/flags-jet-ski.png" alt="" loading="lazy">
+                <img src="images/flags-bg.png" alt="" loading="lazy">
+            </div>
+            <div class="about__content">
+                <p><span>МНОГОЛЕТНИЙ ОПЫТ</span>организации ДОСААФ России осуществляют обучение с 1927 года! Мы выполняем Государственные задачи. За почти вековую историю системы ДОСААФ России - накоплен многолетний опыт и профессиональные навыки, сформирован штат высококвалифицированных преподавателей и инструкторов. Вы в надёжных руках!</p>
+                <p><span>СОБСТВЕННЫЕ МАЛОМЕРНЫЕ СУДА</span>мы не арендуем водный транспорт у других, а имеем в собственности моторное судно и гидроцикл! Наши водо-моторные средства постоянно находятся на базе Центра ГИМС на озере Смолино. Там же проходит практический этап обучения, там же специалисты ГИМС принимают экзамен по теоретическим знаниям и практическим навыкам на нашей водной технике.</p>
+                <p><span>ГАРАНТИЯ СООТВЕТСТВИЯ ЗАКОНОДАТЕЛЬСТВУ</span>У нас всё по закону! Школа ДОСААФ имеет Лицензию на образовательную деятельность, выданную Минобрнауки Челябинской области. Учебно-материальная база соответствует всем требованиям законодательства.</p>
+                <p><span>ВСЁ В ОДНОМ МЕСТЕ</span>практические занятия на водных транспортных средствах ДОСААФ России, приём теоретического экзамена ГИМС и приём практического экзамена ГИМС организованы в одном месте - на озере Смолино. Добраться до Центра ГИМС на озере Смолино удобно с любого района города!</p>
+                <p><span>УВЕРЕННОСТЬ В СДАЧЕ ЭКЗАМЕНА ГИМС</span>практические занятия на моторном судне и гидроцикле проходят на том же участке воды на котором сдаются экзамены ГИМС. Наша школа оказывает своим ученикам всю необходимую помощь в подготовке к сдаче экзамена и сопровождает вас на экзамене в ГИМС!</p>
+                <a href="#" class="btn-border">подробнее</a>
+            </div>
+        </div>
+    </section>
+    <section class="way">
+        <h2>путь к получению<span>удостоверения гимс</span></h2>
+        <div class="section-box way__content">
+            <div class="way__step">
+                <div class="way__step__content">
+                    <h3>01</h3>
+                    <div>
+                        <span>шаг</span>
+                        <p><b>Определиться,</b> каким типом (типами) маломерного судна вы хотите управлять и в каком районе (районах) плавания.</p>
+                    </div>
+                </div>
+                <img src="images/step-img-1.png" alt="" loading="lazy">
+                <div class="way__step__bg"></div>
+                <div class="way__step__hover"></div>
+            </div>
+            <div class="way__step">
+                <div class="way__step__content">
+                    <h3>02</h3>
+                    <div>
+                        <span>шаг</span>
+                        <p><b>Пройти медицинское освидетельствование</b> и получить медицинское заключение об отсутствии противопоказаний к управлению маломерным судном.</p>
+                    </div>
+                </div>
+                <img src="images/step-img-2.png" alt="" loading="lazy">
+                <div class="way__step__bg"></div>
+                <div class="way__step__hover"></div>
+            </div>
+            <div class="way__step">
+                <div class="way__step__content">
+                    <h3>03</h3>
+                    <div>
+                        <span>шаг</span>
+                        <p><b>Пройти обучение в нашей школе</b> (заключить договор), мы подготовим вас к проверки теоретических знаний в ГИМС и к проверке практических навыков, после чего выдадим Свидетельство о прохождении обучения!</p>
+                    </div>
+                </div>
+                <img src="images/step-img-3.png" alt="" loading="lazy">
+                <div class="way__step__bg"></div>
+                <div class="way__step__hover"></div>
+            </div>
+            <div class="way__step">
+                <div class="way__step__content">
+                    <h3>04</h3>
+                    <div>
+                        <span>шаг</span>
+                        <p><b>Подать заявление</b> и пакет документов в подразделение ГИМС по результатам обучения и выбранным вами типам маломерных судов и районам плавания.</p>
+                    </div>
+                </div>
+                <img src="images/step-img-4.png" alt="" loading="lazy">
+                <div class="way__step__bg"></div>
+                <div class="way__step__hover"></div>
+            </div>
+            <div class="way__step">
+                <div class="way__step__content">
+                    <h3>05</h3>
+                    <div>
+                        <span>шаг</span>
+                        <p><b>Пройти в ГИМС проверку</b> теоретических знаний и проверку практических навыков (практика сдаётся на наших водо-моторных средствах, на чём учились - на том и сдаёте!)</p>
+                    </div>
+                </div>
+                <img src="images/step-img-5.png" alt="" loading="lazy">
+                <div class="way__step__bg"></div>
+                <div class="way__step__hover"></div>
+            </div>
+            <div class="way__step">
+                <div class="way__step__content">
+                    <h3>06</h3>
+                    <div>
+                        <span>шаг</span>
+                        <p><b>Получить удостоверение</b> на право управления маломерным судном (права ГИМС) в котором указываются типы маломерных судов, которыми он может управлять и <span>разрешенные районы плавания!</span></p>
+                    </div>
+                </div>
+                <img src="images/step-img-6.png" class="without-border" alt="" loading="lazy">
+                <div class="way__step__bg"></div>
+                <div class="way__step__hover"></div>
+            </div>
+        </div>
+    </section>
+    <section class="calculator">
+        <h2>Рассчитать стоимость</h2>
+        <img src="images/gull-2.png" alt="" loading="lazy">
+        <div class="section-box">
+            <div class="calculator__content">
+                <div class="calculator__control_step_1 disabled">
+                    <h3><span>01</span> выбор типа маломерного судна</h3>
+                    <div>
+                        <div class="calculator__input">
+                            <div>
+                                <input type="radio" value="1" id="ship1" name="ship" class="calculator__checkbox">
+                                <label for="ship1">
+                                    <span>маломерное<br>моторное судно</span>
+                                    <span></span>
+                                </label>
+                            </div>
+                            <img src="images/calculator-img-1.png" alt="" loading="lazy">
+                        </div>
+                        <div class="calculator__input">
+                            <div>
+                                <input type="radio" value="2" id="ship2" name="ship" class="calculator__checkbox">
+                                <label for="ship2">
+                                    <span>гидроцикл</span>
+                                    <span></span>
+                                </label>
+                            </div>
+                            <img src="images/calculator-img-2.png" alt="" loading="lazy">
+                        </div>
+                        <div class="calculator__input">
+                            <div>
+                                <input type="radio" value="3" id="ship3" name="ship" class="calculator__checkbox">
+                                <label for="ship3">
+                                    <span>маломерное<br>моторное судно<br>+ гидроцикл</span>
+                                    <span></span>
+                                </label>
+                            </div>
+                            <img src="images/calculator-img-3.png" alt="" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator__control_step_2 disabled">
+                    <h3><span>02</span> выбор разрешенного района плавания</h3>
+                    <div>
+                        <div class="calculator__input">
+                            <div>
+                                 <input type="radio" value="1" id="area1" name="area" class="calculator__checkbox">
+                                <label for="area1">
+                                    <div><span><b>ВП </b></span><span>Внутренние пути</span></div>
+                                    <span><i>не судоходные реки и озера</i></span>
+                                    <span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="calculator__input">
+                            <div>
+                                <input type="radio" value="2" id="area2" name="area" class="calculator__checkbox">
+                                <label for="area2">
+                                    <div><span><b>ВВП </b></span><span>Внутренние Водные Пути</span></div>
+                                    <span><i>судоходные реки и озера</i></span>
+                                    <span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="calculator__input">
+                            <div>
+                                <input type="radio" value="3" id="area3" name="area" class="calculator__checkbox">
+                                <label for="area3">
+                                    <div><span><b>МП </b></span><span>Морские Пути</span></div>
+                                    <span><i>внутренние и внешние моря и озера (Байкал, Онежское, Ладожское)</i></span>
+                                    <span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="calculator__input">
+                            <div>
+                                <input type="radio" value="4" id="area4" name="area" class="calculator__checkbox">
+                                <label for="area4">
+                                    <div><span><b>ВП </b></span><span>Внутренние Пути </span><span><b>+</b></span></div>
+                                    <div><span><b>ВВП </b></span><span>Внутренние<br>Водные Пути</span></div>
+                                    <span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="calculator__input back">                            
+                            <p><img src="images/svg/btn-arrow-gray.svg" alt="" loading="lazy">Назад</p>
+                        </div>
+                        <div class="calculator__input">
+                            <div>
+                                <input type="radio" value="5" id="area5" name="area" class="calculator__checkbox">
+                                <label for="area5">
+                                    <div><span><b>ВП</b></span><span><b>+</b></span><span><b>ВВП</b></span><span><b>+</b></span><span><b>МП</b></span></div>
+                                    <span>все районы плавания</span>
+                                    <span></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator__visual">
+                    <img alt="">
+                    <div class="calculator__visual__areas">
+                        <div class="calculator__visual__area calculator__visual__area_1 disabled">
+                            <div>
+                                <p><b>ВП </b></p>
+                                <p>Внутренние<br>Пути</p>
+                            </div>
+                        </div>
+                        <div class="calculator__visual__area calculator__visual__area_2 disabled">
+                            <div>
+                                <p><b>ВВП </b></p>
+                                <p>Внутренние<br>Водные Пути</p>
+                            </div>
+                        </div>
+                        <div class="calculator__visual__area calculator__visual__area_3 disabled">
+                            <div>
+                                <p><b>МП </b></p>
+                                <p>Морские Пути</p>
+                            </div>
+                        </div>
+                        <div class="calculator__visual__area calculator__visual__area_4 disabled">
+                            <div>
+                                <p><b>ВП </b></p>
+                                <p>Внутренние<br>Пути</p>
+                            </div>
+                            <span>+</span>
+                            <div>
+                                <p><b>ВВП </b></p>
+                                <p>Внутренние<br>Водные Пути</p>
+                            </div>
+                        </div>
+                        <div class="calculator__visual__area calculator__visual__area_5 disabled">
+                            <div>
+                                <p><b>ВП </b></p>
+                                <p>Внутренние<br>Пути</p>
+                            </div>
+                            <span>+</span>
+                            <div>
+                                <p><b>ВВП </b></p>
+                                <p>Внутренние<br>Водные Пути</p>
+                            </div>
+                            <span>+</span>
+                            <div>
+                                <p><b>МП </b></p>
+                                <p>Морские Пути</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator__visual__content">
+                        <p>Ваша стоимость: <span>0 руб.</span></p>
+                        <button href="#" class="btn-normal disabled">Далее</button>
+                    </div>
+                </div>
+                <img src="images/svg/pattern.svg" alt="" loading="lazy">
+            </div>
+        </div>
+    </section>
+    <section class="section-box application">
+        <div class="application__content">
+            <h2>Получить <span>консультацию</span></h2>
+            <form>
+                <input type="text" placeholder="Ваше имя">
+                <input type="tel" placeholder="Ваш телефон">
+                <img src="images/application-img.jpg" alt="" loading="lazy">
+                <div>
+                    <p class="a">Нажимая на кнопку <span>«Отправить»</span>, вы даете согласие<br>на обработку своих <a href="#">персональных данных</a></p>
+                    <button class="btn-normal">отправить</button>
+                </div>
+            </form>
+            <img src="images/application-bg.jpg" alt="" loading="lazy">
+        </div>
+        <img src="images/svg/pattern.svg" alt="" loading="lazy">
+    </section>
+    <footer class="footer">
+        <div class="section-box">
+            <div class="footer__content">
+                <nav class="menu footer__menu">
+                    <a href="#">О нас</a>
+                    <a href="#" class="active">Услуги</a>
+                    <a href="#">лицензии и разрешения</a>
+                    <a href="#">наши клиенты</a>
+                    <a href="#" class="active-secondary">наши клиенты</a>
+                    <a href="#">Контакты</a>
+                </nav>
+                <div>
+                    <div class="footer__info">
+                        <div class="footer__title">
+                            <a href="#" class="footer__logo"><img src="images/svg/logo.svg" alt="" loading="lazy"></a>
+                            <div>
+                                <p>челябинская школа специальной подготовки<br><span>досааф россии</span></p>
+                                <div class="burger__address">
+                                    <div class="burger__address__item">
+                                        <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 6.7C1 3.552 3.686 1 7 1C10.314 1 13 3.552 13 6.7C13 9.824 11.085 13.469 8.097 14.772C7.7508 14.9223 7.37741 14.9998 7 14.9998C6.62259 14.9998 6.2492 14.9223 5.903 14.772C2.915 13.47 1 9.824 1 6.7Z" stroke="#56A2E9" stroke-width="1.5"/>
+                                            <path d="M7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9Z" stroke="#56A2E9" stroke-width="1.5"/>
+                                        </svg>
+                                        <div>
+                                            <p>Адрес школы:</p>
+                                            <p><span>г. Челябинск</span> ул. Евтеева д.6 цокольный этаж</p>
+                                        </div>
+                                    </div>
+                                    <div class="burger__address__item">
+                                        <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 6.7C1 3.552 3.686 1 7 1C10.314 1 13 3.552 13 6.7C13 9.824 11.085 13.469 8.097 14.772C7.7508 14.9223 7.37741 14.9998 7 14.9998C6.62259 14.9998 6.2492 14.9223 5.903 14.772C2.915 13.47 1 9.824 1 6.7Z" stroke="#56A2E9" stroke-width="1.5"/>
+                                            <path d="M7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9Z" stroke="#56A2E9" stroke-width="1.5"/>
+                                        </svg>
+                                        <div>
+                                            <p>Адрес тира:</p>
+                                            <p><span>г. Челябинск</span> ул. Плеханова д.1А</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__connection">
+                            <a href="#" data-fancybox data-src="#dialog-content" class="header__tel">
+                                <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 9.69195L16.9008 9.21747L14.9406 11.1776C12.7324 10.0546 10.9376 8.25979 9.81458 6.05164L11.7825 4.08369L11.308 0H7.02212C6.57097 7.91847 13.0815 14.429 21 13.9779V9.69195Z" fill="#56A2E9"/>
+                                    <path d="M4 1H1M4 5H2" stroke="#56A2E9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <b>8 (351)</b> 260-12-00
+                                <br><span>заказать звонок</span>
+                            </a>
+                            <a href="mailto:nou_rosto@mail.ru" class="header__mail">
+                                <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1H4M1 5H3M7.02 2.801L6.42 8.801C6.3922 9.07903 6.42296 9.35981 6.51031 9.62522C6.59766 9.89064 6.73966 10.1348 6.92715 10.342C7.11464 10.5492 7.34346 10.7148 7.59886 10.8281C7.85426 10.9414 8.13058 11 8.41 11H16.39C16.886 11 17.3642 10.8157 17.732 10.4829C18.0997 10.1501 18.3307 9.69251 18.38 9.199L18.98 3.199C19.0078 2.92097 18.977 2.64019 18.8897 2.37478C18.8023 2.10936 18.6603 1.86519 18.4729 1.65801C18.2854 1.45083 18.0565 1.28524 17.8011 1.17191C17.5457 1.05857 17.2694 1.00001 16.99 1H9.01C8.51403 1.00002 8.03576 1.18432 7.66803 1.51712C7.3003 1.84993 7.06935 2.30749 7.02 2.801Z" stroke="#56A2E9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.7998 1.5L10.7818 4.78C11.0468 5.07155 11.3666 5.30804 11.723 5.47598C12.0794 5.64392 12.4654 5.74001 12.859 5.75877C13.2525 5.77753 13.6459 5.71858 14.0166 5.5853C14.3874 5.45203 14.7283 5.24702 15.0198 4.982L18.2998 2" stroke="#56A2E9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                nou_rosto@mail.ru
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer__map">
+                            <img src="images/footer-map.png" alt="" loading="lazy">
+                        </div>
+                        <a href="https://vk.com/feed" target="_blank" class="footer__social header__social">
+                            <svg width="25" height="14" viewBox="0 0 25 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.24581 0.979455C8.57841 1.13714 9.35439 1.05509 9.63311 2.0165C9.88423 2.88255 9.87392 4.95368 9.67984 5.91772C9.14318 8.58359 6.8778 4.36717 6.31852 3.44094C6.02899 2.96131 5.52526 1.86737 5.30141 1.33363C4.91526 0.412672 3.98945 0.608835 2.88602 0.608835C2.47093 0.608835 2.19071 0.646817 1.79907 0.645995C1.18624 0.644515 0 0.527278 0 1.09061C0 1.52157 0.24696 1.95221 0.437211 2.32596L1.4623 4.35122C1.64141 4.69158 1.80572 5.03277 2.00811 5.36804L2.56506 6.33669C4.03185 8.73158 5.79417 11.5407 8.43323 12.8382C10.4335 13.8216 11.375 13.8017 13.5682 13.8017C13.9096 13.8017 14.3385 13.6179 14.4571 13.3836C14.6017 13.0978 14.5869 12.6249 14.6185 12.2461C14.6959 11.3233 15.1492 10.1054 16.2452 10.8583C16.7644 11.2151 17.3953 12.0461 17.8691 12.5139C18.1259 12.7673 18.4365 13.0991 18.7249 13.2984C18.8726 13.4005 19.117 13.5478 19.2697 13.6121C20.1759 13.9936 21.2166 13.8014 22.3388 13.8017C22.9616 13.8019 24.0473 13.9035 24.5723 13.5641C25.4046 13.0259 24.5723 12.0642 24.1005 11.467C23.8309 11.126 22.791 10.0368 22.4228 9.71617C20.0126 7.61774 20.4949 7.95795 22.9921 4.66412C23.5159 3.97303 24.925 2.16219 24.925 1.20176C24.925 0.698283 24.3854 0.655203 23.9814 0.612781C23.7737 0.591076 23.716 0.64468 23.5023 0.647311C22.8384 0.655532 19.8152 0.575456 19.437 0.704367C19.1927 0.787732 19.0539 1.03618 18.9546 1.26507C18.3928 2.55846 18.0098 3.44916 17.2042 4.64867C16.8781 5.13422 15.8336 6.76058 15.1798 6.76058C14.7115 6.76058 14.5427 5.8383 14.5427 5.38941C14.5427 4.02795 14.6177 2.78586 14.6177 1.46123C14.6177 1.17924 14.556 0.883594 14.4622 0.688418C14.0526 -0.164306 11.822 0.0159071 10.7946 0.0159071C10.0525 0.0159071 8.85614 0.0918728 8.39415 0.681347C8.32231 0.773263 8.25911 0.822427 8.24581 0.979455Z" fill="#7D889A"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <p>© 2010-2024 ЧЕЛЯБИНСКАЯ школа специальной подготовки досааф Политика конфиденциальности   Согласие на обработку персональных данных </p>
+                <a href="https://luxargroup.ru/" target="_blank" class="footer__luxar"><img src="images/svg/luxar-logo.svg" alt="" loading="lazy"></a>
+            </div>
+        </div>
+    </footer>
+    <div class="application__popup" id="dialog-content" style="display: none;">
+        <h2>Заказ звонка</h2>
+        <form>
+            <input type="text" placeholder="Ваше имя">
+            <input type="tel" placeholder="Ваш Телефон">
+            <textarea placeholder="Наши администраторы ответят на любой интересующий Вас вопрос по услуге"></textarea>
+            <div>
+                <button class="btn-normal">отправить</button>
+                <p class="a">Нажимая на кнопку <span>«Отправить»</span>, вы даете согласие на обработку своих <a href="#">персональных данных</a></p>
+            </div>
+        </form>
+        <img src="images/flags-jet-ski.png" alt="" loading="lazy">
+        <img src="images/svg/pattern.svg" alt="" loading="lazy">
+    </div>
+    <div class="application__popup" id="order-form" style="display: none;">
+        <h2>записаться</h2>
+        <div>
+            <p class="ship">Судно: <span></span></p>
+            <p class="area">Районы: <span></span></p>
+            <p class="cost">Стоимость: <span></span></p>
+        </div>
+        <form>
+            <input type="text" placeholder="Ваше имя">
+            <input type="tel" placeholder="Ваш Телефон">
+            <div>
+                <button class="btn-normal">отправить</button>
+                <p class="a">Нажимая на кнопку <span>«Отправить»</span>, вы даете согласие на обработку своих <a href="#">персональных данных</a></p>
+            </div>
+        </form>
+        <img alt="">
+        <img src="images/svg/pattern.svg" alt="" loading="lazy">
+    </div>
+    <script src="js/jquery/jquery-3.6.0.min.js"></script>
+    <script src="js/swiper/swiper-bundle.min.js"></script>
+    <script src="js/fancybox/fancybox.umd.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+</html>

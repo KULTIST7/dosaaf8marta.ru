@@ -1,0 +1,261 @@
+.footer {
+    height: 275px;
+    background: url(../images/footer-bg.jpg) no-repeat center;
+    background-size: cover;
+
+    @media #{$tablet} {
+        height: auto;
+    }
+
+    .section-box {
+        height: 100%;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        background-color: #1415171A;
+        backdrop-filter: blur(10px);
+        box-shadow: 0px 4px 60px 0px #00000026;
+        padding: 16px 0 12px 0;
+        border-radius: 20px;
+
+        @media #{$tablet} {
+            padding: 28px 0 15px 0;
+        }
+
+        &>div {
+            height: 100%;
+
+            @media #{$tablet} {
+                margin-bottom: 20px;
+            }
+        }
+
+        &>p {
+            font-family: $font-main;
+            color: #40464E;
+            margin-right: 120px;
+
+            @media #{$tablet} {
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+    }
+
+    &__menu {
+        position: absolute;
+        gap: 40px;
+        background: #121921;
+        padding: 0 40px;
+        border-radius: 0 0 80px 80px;
+        top: 0;
+        left: 20px;
+
+        @media #{$tablet} {
+            display: none;
+        }
+
+        a {
+            font-size: 16px;
+
+            &::before {
+                content: none;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        padding-bottom: 40px;
+
+        @media #{$tablet} {
+            flex-direction: column-reverse;
+            padding-bottom: 10px;
+        }
+    }
+
+    &__title {
+        display: flex;
+        margin-top: auto;
+        margin-left: 20px;
+
+        @media #{$tablet} {
+            flex-direction: column-reverse;
+            margin-left: 0;
+        }
+
+        &>div {
+            @media #{$tablet} {
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 20px;
+                transform: translateY(60px);
+                margin-top: -60px;
+            }
+
+            &>p {
+                font-family: $font-main;
+                font-weight: $font-weight-bold;
+                font-size: 20px;
+                line-height: 25px;
+                color: #BCC1CA;
+                margin-bottom: 7px;
+        
+                @media #{$tablet} {
+                    font-size: 15px;
+                    line-height: 19px;
+                    margin-left: 77px;
+                }
+        
+                span {
+                    font-size: 30px;
+                    color: $color-active-tertiary;
+                }
+            }
+
+            .burger__address__item svg {
+                @media #{$tablet} {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        width: 122px;
+        height: 122px;
+        margin-right: 20px;
+
+        @media #{$tablet} {
+            width: 67px;
+            height: 67px;
+            margin-right: 0;
+        }
+
+        img {
+            max-width: none;
+            width: inherit;
+        }
+    }
+
+    &__connection {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 8px;
+
+        @media #{$tablet} {
+            align-items: start;
+            margin-bottom: 20px;
+        }
+
+        .header__tel {
+            @media #{$tablet} {
+                font-size: 25px;
+                line-height: 25px;
+                background-color: transparent;
+                backdrop-filter: none;
+                box-shadow: none;
+                padding: 0;
+                border-radius: 0;
+            }
+
+            span {
+                display: flex;
+                width: max-content;
+                margin-left: auto;
+
+                @media #{$tablet} {
+                    display: none;
+                }
+            }
+        }
+
+        .header__mail {
+            @media #{$tablet} {
+                display: initial;
+            }
+        }
+    }
+
+    &__map {
+        position: absolute;
+        width: 447px;
+        aspect-ratio: 447 / 220;
+        border-radius: 44px;
+        top: 18px;
+        left: 740px;
+
+        @media screen and (max-width: 1500px) {
+            top: 60px;
+            width: 350px;
+        }
+
+        @media screen and (max-width: 1400px) {
+            left: 500px;
+        }
+
+        @media screen and (max-width: 1100px) {
+            width: 280px;
+            aspect-ratio: 347 / 220;
+        }
+
+        @media #{$tablet} {
+            width: 375px;
+            top: 28px;
+            left: auto;
+            right: 0;
+        }
+
+        @media #{$phone} {
+            position: initial;
+            width: 100%;
+            margin-bottom: 14px;
+        }
+
+        img {
+            object-fit: cover;
+            object-position: center;
+            width: auto;
+            height: 100%;
+            border-radius: 44px;
+        }
+    }
+
+    &__social {
+        position: absolute;
+        top: 95px;
+        right: 0;
+
+        @media #{$tablet} {
+            position: initial;
+            width: 320px;
+            margin-left: 0;
+        }
+
+        @media #{$phone} {
+            width: 100%;
+        } 
+    }
+
+    &__luxar {
+        position: absolute;
+        right: 0;
+        bottom: 15px;
+
+        @media #{$tablet} {
+            bottom: 0;
+        }
+
+        img {
+            max-width: none;
+            width: 100px;
+        }
+    }
+}

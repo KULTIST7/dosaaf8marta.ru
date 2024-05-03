@@ -1,0 +1,422 @@
+.way {
+    margin-bottom: 210px;
+
+    @media #{$tablet} {
+        overflow: hidden;
+        margin-bottom: 94px;
+    }
+
+    h2 {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 80px;
+
+        @media #{$tablet} {
+            margin-bottom: 28px;
+        }
+
+        @media #{$phone} {
+            &::before, &::after {
+                content: none;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__step {
+        position: relative;
+        display: flex;
+        width: 787px;
+        height: 200px;
+
+        @media #{$tablet} {
+            width: 100%;
+            height: 260px;
+            margin-bottom: 40px;
+        }
+
+        &:hover {
+            z-index: 1;
+
+            .way__step__hover {
+                opacity: 1;
+            }
+
+            .way__step__bg {
+                border-radius: 120px !important;
+
+                @media #{$tablet} {
+                    border-radius: 50px !important;
+                }
+            }
+        }
+
+        &::before,
+        &>.way__step__bg::before {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            z-index: -2;
+
+            @media #{$tablet} {
+                width: 70px;
+                height: 40px;
+            }
+        }
+
+        &::after,
+        &>.way__step__bg::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            z-index: -2;
+        }
+
+        &:nth-of-type(odd) {
+            margin-right: auto;
+
+            &::before,
+            &::after {
+                right: -40px;
+
+                @media #{$tablet} {
+                    right: 50px;
+                }
+            }
+
+            &::before {
+                background-color: #F7F8FA;
+                bottom: -20px;
+
+                @media #{$tablet} {
+                    bottom: -40px;
+                }
+            }
+
+            &::after {
+                background-color: #EEF2F5;
+                border-radius: 0 0 0 40px;
+                bottom: 0;
+
+                @media #{$tablet} {
+                    border-radius: 40px 0 0 40px;
+                    bottom: -40px;
+                }
+            }
+
+            .way__step__content {
+                padding-left: 290px;
+                padding-right: 37px;
+
+                @media #{$desktop} {
+                    padding-left: 250px;
+                }
+
+                @media #{$tablet} {
+                    padding-left: 172px;
+                    padding-right: 14px;
+                }
+            }
+
+            img {
+                border-radius: 0 0 0 120px;
+                left: 0;
+
+                @media #{$tablet} {
+                    border-radius: 0 0 0 50px;
+                }
+            }
+
+            .way__step__bg {
+                border-radius: 120px 0 0 120px;
+
+                &::before,
+                &::after {
+                    right: -40px;
+                }
+
+                &::before {
+                    background-color: #F7F8FA;
+                    top: 60px;
+
+                    @media #{$tablet} {
+                        top: auto;
+                        right: 120px;
+                        bottom: -40px;
+                    }
+                }
+
+                &::after {
+                    background-color: #EEF2F5;
+                    border-radius: 40px 0 0 0;
+                    top: 80px;
+
+                    @media #{$tablet} {
+                        border-radius: 0 40px 40px 0;
+                        top: auto;
+                        right: 150px;
+                        bottom: -40px;
+                    }
+                }
+            }
+        }
+        
+        &:nth-of-type(even) {
+            margin-left: auto;
+
+            &::before,
+            &::after {
+                left: -40px;
+
+                @media #{$tablet} {
+                    left: 50px;
+                }
+            }
+
+            &::before {
+                background-color: #F7F8FA;
+                bottom: -20px;
+
+                @media #{$tablet} {
+                    bottom: -40px;
+                }
+            }
+
+            &::after {
+                background-color: #EEF2F5;
+                border-radius: 0 0 40px 0;
+                bottom: 0;
+
+                @media #{$tablet} {
+                    border-radius: 0 40px 40px 0;
+                    bottom: -40px;
+                }
+            }
+
+            .way__step__content {
+                padding-left: 37px;
+                padding-right: 320px;
+
+                @media #{$desktop} {
+                    padding-left: 100px;
+                    padding-right: 250px;
+                }
+
+                @media #{$tablet} {
+                    padding-left: 16px;
+                    padding-right: 166px;
+                }
+            }
+
+            img {
+                border-radius: 0 0 120px 0;
+                right: 0;
+
+                @media #{$tablet} {
+                    border-radius: 0 0 50px 0;
+                }
+            }
+
+            .way__step__bg {
+                border-radius: 0 120px 120px 0;
+
+                &::before,
+                &::after {
+                    left: -40px;
+                }
+    
+                &::before {
+                    top: 60px;
+                    background-color: #F7F8FA;
+
+                    @media #{$tablet} {
+                        top: auto;
+                        left: 120px;
+                        right: auto;
+                        bottom: -40px;
+                    }
+                }
+    
+                &::after {
+                    background-color: #EEF2F5;
+                    border-radius: 0 40px 0 0;
+                    top: 80px;
+
+                    @media #{$tablet} {
+                        border-radius: 40px 0 0 40px;
+                        top: auto;
+                        right: auto;
+                        left: 150px;
+                        bottom: -40px;
+                    }
+                }
+            }
+        }
+
+        &:first-of-type &__bg {
+            border-radius: 120px 120px 0 120px;
+        }
+
+        &:last-of-type {
+            @media #{$tablet} {
+                margin-bottom: 0;
+            }
+        }
+        
+        &:last-of-type:nth-of-type(odd) &__bg {
+            border-radius: 120px 0 120px 120px;
+        }
+
+        &:last-of-type:nth-of-type(even) &__bg {
+            border-radius: 0 120px 120px 120px;
+        }
+
+        &:last-of-type::before, &:last-of-type::after, &:first-of-type>.way__step__bg::before, &:first-of-type>.way__step__bg::after {
+            content: none;
+
+            @media #{$tablet} {
+                content: '';
+            }
+        }
+
+        &:last-of-type::before, &:last-of-type::after, &:last-of-type>.way__step__bg::before, &:last-of-type>.way__step__bg::after {
+            @media #{$tablet} {
+                content: none;
+            }
+        }
+
+        &__content {
+            display: flex;
+            width: 100%;
+            padding-top: 35px;
+
+            @media #{$tablet} {
+                flex-direction: column;
+                justify-content: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            h3 {
+                font-size: 150px;
+                line-height: 130px;
+                color: #E6E8EC;
+                margin: 0 10px 0 0;
+
+                @media #{$tablet} {
+                    font-size: 50px;
+                    line-height: 45px;
+                }
+
+                &::before, &::after {
+                    content: none;
+                }
+            }
+
+            div {
+                @media #{$tablet} {
+                    transform: translateY(-42px);
+                    margin-bottom: -42px;
+                }
+
+                &>span {
+                    font-family: $font-main;
+                    font-weight: $font-weight-bold;
+                    font-size: 40px;
+                    line-height: 45px;
+                    color: #E6E8EC;
+
+                    @media #{$tablet} {
+                        font-size: 35px;
+                        padding-left: 50px;
+                    }
+                }
+
+                p {
+                    font-weight: $font-weight-medium;
+                    font-size: 18px;
+                    line-height: 20px;
+                    color: #6F7279;
+                    margin-top: 10px;
+
+                    @media #{$tablet} {
+                        font-size: 14px;
+                        line-height: 16px;
+                        margin-top: 0;
+                    }
+
+                    b, span {
+                        color: #E21C2A;
+                    }
+
+                    b {
+                        font-weight: $font-weight-bold;
+                    }
+                }
+            }
+        }
+
+        img {
+            position: absolute;
+            pointer-events: none;
+            width: 362px;
+            bottom: -80px;
+
+            @media #{$desktop} {
+                width: 300px;
+            }
+
+            @media #{$tablet} {
+                width: 172px;
+                bottom: 0;
+            }
+
+            &.without-border {
+                border-radius: 0;
+                bottom: -140px;
+
+                @media #{$tablet} {
+                    bottom: 0;
+                }
+            }
+        }
+
+        &__bg {
+            position: absolute;
+            width: 100%;
+            height: 280px;
+            background-color: #F7F8FA;
+            z-index: -1;
+
+            @media #{$tablet} {
+                height: 100%;
+                border-radius: 50px !important;
+            }
+        }
+
+        &__hover {
+            position: absolute;
+            width: 100%;
+            height: 280px;
+            box-shadow: 0px 4px 60px 0px #00000030;
+            border-radius: 120px;
+            border: 3px solid #FFFFFF;
+            transition: all .1s linear;
+            opacity: 0;
+            z-index: -1;
+            top: 0;
+            left: 0;
+
+            @media #{$tablet} {
+                border-radius: 50px;
+                height: 100%;
+            }
+        }
+    }
+}

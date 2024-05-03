@@ -1,0 +1,120 @@
+.about {
+    margin-bottom: 185px;
+
+    @media #{$tablet} {
+        margin-bottom: 52px;
+    }
+
+    .section-box {
+        display: flex;
+
+        @media #{$tablet} {
+            flex-direction: column;
+            overflow: hidden;
+        }
+    }
+
+    &__flags {
+        position: relative;
+        max-width: 582px;
+
+        @media #{$desktop} {
+            max-width: 480px;
+            transform: translateX(-30px);
+        }
+
+        @media #{$tablet} {
+            max-width: none;
+            width: 100%;
+            margin: 0 auto;
+            transform: none;
+        }
+
+        img {
+            position: absolute;
+            max-width: none;
+            pointer-events: none;
+
+            &:nth-of-type(1) {
+                width: 625px;
+                aspect-ratio: 625 / 417;
+                top: 25px;
+                left: -87px;
+
+                @media #{$tablet} {
+                    width: auto;
+                    height: 398px;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-52%);
+                }
+            }
+
+            &:nth-of-type(2) {
+                width: 778px;
+                aspect-ratio: 778 / 344;
+                top: 300px;
+                left: -122px;
+
+                @media #{$tablet} {
+                    display: none;
+                }
+            }
+
+            &:nth-of-type(3) {
+                position: relative;
+                width: 890px;
+                aspect-ratio: 890 / 556;
+                top: -70px;
+                left: -225px;
+                z-index: -1;
+                
+                @media #{$tablet} {
+                    width: auto;
+                    height: 398px;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 45px;
+        z-index: 1;
+
+        p {
+            font-weight: $font-weight-medium;
+            line-height: 22px;
+            color: #6F7279;
+            display: flex;
+            flex-direction: column;
+
+            @media #{$tablet} {
+                font-size: 14px;
+                line-height: 14px;
+            }
+
+            span {
+                font-family: $font-main;
+                font-weight: $font-weight-bold;
+                font-size: 25px;
+                color: $color-black;
+
+                @media #{$tablet} {
+                    line-height: 20px;
+                }
+            }
+        }
+
+        a {
+            @media #{$phone} {
+                margin: 0 auto;
+            }
+        }
+    }
+}

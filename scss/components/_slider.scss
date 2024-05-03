@@ -1,0 +1,179 @@
+.slider {
+    position: relative;
+    height: 600px;
+    margin-bottom: 115px;
+
+    @media #{$tablet} {
+        margin-bottom: 50px;
+    }
+
+    .swiper {
+        &-slide {
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 300px;
+                background: linear-gradient(180deg, #000000 0%, rgba(21, 57, 126, 0) 100%);
+                pointer-events: none;
+                top: 0;
+                left: 0;
+
+                @media #{$tablet} {
+                    height: 100%;
+                    background: linear-gradient(195.32deg, rgba(4, 11, 24, 0) 49.16%, rgba(3, 9, 22, 0.9) 77.33%);
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 160px;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(21, 57, 126, 0) 100%);
+                pointer-events: none;
+                left: 0;
+                bottom: 0;
+
+                @media #{$tablet} {
+                    content: none;
+                }
+            }
+
+            img {
+                position: absolute;
+                object-fit: cover;
+                object-position: 35%;
+                box-sizing: initial;
+                width: 100%;
+                height: 600px;
+                pointer-events: none;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+
+            .section-box {
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                height: 100%;
+                padding: 0 75px 100px;
+
+                @media #{$tablet} {
+                    justify-content: space-between;
+                    padding: 122px 25px 56px;
+                }
+
+                @media #{$phone} {
+                    padding: 122px 14px 56px;
+                }
+
+                h2 {
+                    font-size: 90px;
+                    line-height: 90px;
+                    color: $color-white;
+                    text-align: left;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 0 22px 0;
+
+                    @media #{$tablet} {
+                        font-size: 45px;
+                        line-height: 45px;
+                        width: 100%;
+                        margin-bottom: 0;
+                    }
+
+                    &::before,
+                    &::after {
+                        content: none;
+                    }
+
+                    span {
+                        font-size: 80px;
+                        line-height: 80px;
+
+                        @media #{$tablet} {
+                            font-size: 30px;
+                            line-height: 30px;
+                        }
+                    }
+                }
+
+                p {
+                    font-size: 18px;
+                    color: #FDFDFD;
+                    display: flex;
+                    max-width: 460px;
+                    margin-bottom: 22px;
+                    z-index: 1;
+
+                    @media #{$tablet} {
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+
+        &-button {
+            &-next,
+            &-prev {
+                display: flex;
+                width: 55px;
+                height: 55px;
+                background: #17242CB2;
+                border: 1px solid #3C4350;
+                border-radius: 50%;
+
+                @media #{$tablet} {
+                    display: none;
+                }
+
+                &::after {
+                    content: '';
+                    width: 12px;
+                    height: 12px;
+                    background: url(../images/svg/btn-arrow-gray.svg) no-repeat;
+                }
+            }
+
+            &-next {
+                right: 80px;
+
+                @media screen and (max-width: 1800px) {
+                    right: 10px;
+                }
+            }
+
+            &-prev {
+                left: 80px;
+                
+                @media screen and (max-width: 1800px) {
+                    left: 10px;
+                }
+
+                &::after {
+                    rotate: 180deg;
+                }
+            }
+        }
+
+        &-pagination-bullet {
+            width: 11px;
+            height: 11px;
+            background-color: #FFFFFFCC;
+            margin: 0 10px 4px !important;
+            opacity: 1;
+
+            &-active {
+                width: 19px;
+                height: 19px;
+                background-color: transparent;
+                margin: 0 10px !important;
+                border: 2px solid #56A2E9;
+            }
+        }
+    }
+}
