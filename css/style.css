@@ -463,7 +463,7 @@ body {
   .header__content {
     height: 90px;
     padding: 5px 0 0 14px;
-    border-radius: 0;
+    border-radius: 0 !important;
     margin: 0;
   }
 }
