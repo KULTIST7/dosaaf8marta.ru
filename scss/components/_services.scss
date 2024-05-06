@@ -2,6 +2,10 @@
     position: relative;
     margin-bottom: 160px;
     
+    @media #{$tablet} {
+        margin-bottom: 100px;
+    }
+
     &>h2 {
         @media #{$tablet} {
             font-size: 33px;
@@ -85,9 +89,14 @@
             position: absolute;
             width: 100%;
             height: 380px;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #0F3962 100%);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(189, 201, 212, 0.28) 27%, rgba(77, 109, 139, 0.74) 74%, #0F3962 100%);
             left: 0;
             bottom: 0;
+
+            @media #{$tablet} {
+                height: 220px;
+                background: linear-gradient(180deg, rgba(0, 85, 165, 0.00) 50%, #061C31 100%);
+            }
         }
 
         &>.section-box {
@@ -102,10 +111,6 @@
         width: 100%;
 
         .swiper {
-            &-slide {
-                align-items: center;
-            }
-
             &-button {
                 &-next, &-prev {
                     display: none;
@@ -166,11 +171,11 @@
             h3 {
                 font-size: 40px;
                 line-height: 40px;
+                text-align: left;
                 margin: 0;
                 transition: all .1s linear;
 
                 @media screen and (max-width: 1200px) {
-                    text-align: left;
                     max-width: 300px;
                 }
 

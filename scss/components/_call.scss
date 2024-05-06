@@ -18,6 +18,18 @@
         display: none;
     }
 
+    &::before {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        width: 700px;
+        aspect-ratio: 487 / 437;
+        background: url(../images/svg/pattern.svg) no-repeat;
+        background-size: cover;
+        top: -160px;
+        right: -350px;
+    }
+
     a {
         path {
             transition: all .1s linear;

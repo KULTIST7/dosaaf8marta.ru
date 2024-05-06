@@ -1,23 +1,4 @@
 $(document).ready(() => {
-    let mainSwiper = new Swiper('.slider', {
-        loop: true,
-        speed: 750,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true
-        },
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true
-        }
-    });
-
     let servicesSwiper = new Swiper('.services-swiper', {
         slidesPerView: 1,
         navigation: {

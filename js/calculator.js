@@ -101,7 +101,6 @@ let calc = {
         if (this.currentStep == 2) {
             $('.calculator__control_step_1').addClass('disabled');
             $('.calculator__control_step_2').removeClass('disabled');
-            button.html('записаться на обучение');
             button.addClass('disabled');
 
             $('.calculator__control_step_2 .calculator__checkbox').change(function() {
@@ -122,7 +121,6 @@ let calc = {
 
             $('.calculator__input.back').on('click', () => {
                 let cost = $('.calculator__visual__content>p>span');
-                button.html('Далее');
 
                 for (let i = 0; i < $('.calculator__control_step_2 .calculator__checkbox').length; i++) {
                     $('.calculator__control_step_2 .calculator__checkbox')[i].checked = false;

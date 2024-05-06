@@ -57,7 +57,10 @@
                 left: -122px;
 
                 @media #{$tablet} {
-                    display: none;
+                    width: auto;
+                    height: 253px;
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
             }
 
@@ -86,6 +89,10 @@
         gap: 25px;
         margin-top: 45px;
         z-index: 1;
+
+        @media #{$tablet} {
+            margin-top: 200px;
+        }
 
         p {
             font-weight: $font-weight-medium;
