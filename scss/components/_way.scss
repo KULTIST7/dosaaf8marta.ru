@@ -291,6 +291,67 @@
             }
         }
 
+        &:nth-of-type(1) {
+            img {
+                @media #{$tablet} {
+                    width: 311px;
+                }
+            }
+
+            .way__step__content {
+                justify-content: end;
+                padding: 0 0 20px 175px;
+            }
+        }
+
+        &:nth-of-type(2) {
+            img {
+                @media #{$tablet} {
+                    width: 264px;
+                }
+            }
+
+            .way__step__content {
+                justify-content: start;
+            }
+        }
+
+        &:nth-of-type(4) {
+            img {
+                @media #{$tablet} {
+                    width: 242px;
+                }
+            }
+
+            .way__step__content {
+                justify-content: start;
+                padding-top: 27px;
+            }
+        }
+
+        &:nth-of-type(5) {
+            img {
+                @media #{$tablet} {
+                    width: 347px;
+                }
+            }
+
+            .way__step__content {
+                justify-content: start;
+                padding: 25px 20px 0;
+            }
+        }
+
+        &:nth-of-type(6) {
+            img {
+                @media #{$tablet} {
+                    top: 23px;
+                    bottom: auto;
+                    width: 180px;
+                }
+            }
+        }
+
         &__content {
             display: flex;
             width: 100%;
