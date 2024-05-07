@@ -12,7 +12,7 @@
         margin-bottom: 80px;
 
         @media #{$tablet} {
-            margin-bottom: 28px;
+            margin-bottom: 67px;
         }
 
         @media #{$phone} {
@@ -293,14 +293,19 @@
 
         &:nth-of-type(1) {
             img {
+                width: 471px;
+
                 @media #{$tablet} {
-                    width: 311px;
+                    left: -20px;
+                    width: 330px;
                 }
             }
 
             .way__step__content {
-                justify-content: end;
-                padding: 0 0 20px 175px;
+                @media #{$tablet} {
+                    justify-content: end;
+                    padding: 0 0 20px 175px; 
+                }
             }
         }
 
@@ -312,7 +317,9 @@
             }
 
             .way__step__content {
-                justify-content: start;
+                @media #{$tablet} {
+                    justify-content: start;
+                }
             }
         }
 
@@ -324,8 +331,10 @@
             }
 
             .way__step__content {
-                justify-content: start;
-                padding-top: 27px;
+                @media #{$tablet} {
+                    justify-content: start;
+                    padding-top: 27px;
+                }
             }
         }
 
@@ -337,8 +346,10 @@
             }
 
             .way__step__content {
-                justify-content: start;
-                padding: 25px 20px 0;
+                @media #{$tablet} {
+                    justify-content: start;
+                    padding: 25px 20px 0;
+                }
             }
         }
 

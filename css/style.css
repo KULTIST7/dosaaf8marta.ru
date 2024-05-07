@@ -1503,7 +1503,7 @@ body {
 }
 @media screen and (max-width: 999px) {
   .way h2 {
-    margin-bottom: 28px;
+    margin-bottom: 67px;
   }
 }
 @media screen and (max-width: 749px) {
@@ -1762,40 +1762,52 @@ body {
     content: none;
   }
 }
+.way__step:nth-of-type(1) img {
+  width: 471px;
+}
 @media screen and (max-width: 999px) {
   .way__step:nth-of-type(1) img {
-    width: 311px;
+    left: -20px;
+    width: 330px;
   }
 }
-.way__step:nth-of-type(1) .way__step__content {
-  justify-content: end;
-  padding: 0 0 20px 175px;
+@media screen and (max-width: 999px) {
+  .way__step:nth-of-type(1) .way__step__content {
+    justify-content: end;
+    padding: 0 0 20px 175px;
+  }
 }
 @media screen and (max-width: 999px) {
   .way__step:nth-of-type(2) img {
     width: 264px;
   }
 }
-.way__step:nth-of-type(2) .way__step__content {
-  justify-content: start;
+@media screen and (max-width: 999px) {
+  .way__step:nth-of-type(2) .way__step__content {
+    justify-content: start;
+  }
 }
 @media screen and (max-width: 999px) {
   .way__step:nth-of-type(4) img {
     width: 242px;
   }
 }
-.way__step:nth-of-type(4) .way__step__content {
-  justify-content: start;
-  padding-top: 27px;
+@media screen and (max-width: 999px) {
+  .way__step:nth-of-type(4) .way__step__content {
+    justify-content: start;
+    padding-top: 27px;
+  }
 }
 @media screen and (max-width: 999px) {
   .way__step:nth-of-type(5) img {
     width: 347px;
   }
 }
-.way__step:nth-of-type(5) .way__step__content {
-  justify-content: start;
-  padding: 25px 20px 0;
+@media screen and (max-width: 999px) {
+  .way__step:nth-of-type(5) .way__step__content {
+    justify-content: start;
+    padding: 25px 20px 0;
+  }
 }
 @media screen and (max-width: 999px) {
   .way__step:nth-of-type(6) img {
@@ -3105,7 +3117,7 @@ body {
   aspect-ratio: 447/220;
   border-radius: 44px;
   top: 18px;
-  left: 780px;
+  left: 740px;
 }
 @media screen and (max-width: 1500px) {
   .footer__map {
