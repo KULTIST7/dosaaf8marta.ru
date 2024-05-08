@@ -20,7 +20,7 @@ $(document).ready(function() {
     calc.idsArea = {
         area1: {
             cost: 2500,
-            name: 'ВП'
+            name: 'ВВ'
         },
         area2: {
             cost: 3500,
@@ -32,11 +32,11 @@ $(document).ready(function() {
         },
         area4: {
             cost: 6000,
-            name: 'ВП+ВВП'
+            name: 'ВВ+ВВП'
         },
         area5: {
             cost: 9000,
-            name: 'ВП+ВВП+МП'
+            name: 'ВВ+ВВП+МП'
         }
     };
 
